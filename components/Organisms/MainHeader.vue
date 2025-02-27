@@ -1,7 +1,10 @@
 <template>
   <header class="header">
     <div class="header__brand">
-      <h1>Smart</h1>
+      <h1>Smart Home</h1>
+      <span @click="toggleTheme" class="theme-toggle">
+        <i :class="theme === 'light' ? 'fas fa-moon' : 'fas fa-sun'"></i> 
+        </span>
     </div>
     <div class="header__menu">
       <navigation-menu />
@@ -14,6 +17,9 @@
 import { ref } from 'vue';
 import NavigationMenu from '@/components/Molecules/NavigationMenu.vue';
 import HamburgerMenu from '@/components/Molecules/HamburgerMenu.vue';
+import { useTheme } from '@/composables/theme'
+const { theme, toggleTheme } = useTheme()
+
 </script>
 
 <style lang="scss" scoped>
@@ -25,9 +31,20 @@ import HamburgerMenu from '@/components/Molecules/HamburgerMenu.vue';
   align-items: center;
 }
 
-.header__brand h1 {
-  color: white;
-  margin: 0;
+.header__brand{ 
+  display: flex;
+  
+  h1 {
+    color: white;
+    margin: 0;
+  }
+
+  .theme-toggle {
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+    margin-left: 5px;
+  }
 }
 
 .header__menu {

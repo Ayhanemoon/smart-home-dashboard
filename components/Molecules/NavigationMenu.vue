@@ -1,6 +1,6 @@
 <template>
   <ul class="nav-menu">
-    <menu-item label="Home" href="#home" />
+    <menu-item label="Home" href="/" />
     <menu-item label="About" href="#about" />
     <menu-item label="Services" href="#services" />
     <menu-item label="Contact" href="#contact" />

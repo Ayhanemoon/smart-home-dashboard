@@ -2,10 +2,10 @@
   <div class="sidebar" :class="{ 'active': sidebar }">
     <div class="sidebar__content">
       <div class="sidebar__brand">
-        <h1>Smart</h1>
+        <h1>Smart Home</h1>
       </div>
       <ul class="nav-menu">
-        <menu-item label="Home" href="#home" />
+        <menu-item label="Home" href="/" />
         <menu-item label="About" href="#about" />
         <menu-item label="Services" href="#services" />
         <menu-item label="Contact" href="#contact" />
